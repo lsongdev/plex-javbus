@@ -1,3 +1,17 @@
+## plex-javdb
+
+JavBus Agent Plugin for Plex Media Server
+
+datasource from: [JavBus](https://javbus.com)
+
+### Installation
+
+```sh
+~$ cd "/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-ins"
+~$ git clone https://github.com/song940/plex-javdb.git JavDB.bundle
+```
+
+
 License
 -------
 
