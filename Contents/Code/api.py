@@ -64,8 +64,7 @@ def fetch_info(id):
             data.series_link = link
         if "genre" in link:
             data.genres.append(text)
-    # /html/body/div[5]/div[1]/div[2]/p[10]/span[1]
-    casts = feed.xpath('/html/body/div[5]/div[1]/div[2]/p[10]/span//a')
+    casts = feed.xpath("//*[contains(@class, 'star-name')]/a")
     for item in casts:
         cast = MovieCast()
         cast.name = item.text
