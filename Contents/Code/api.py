@@ -5,9 +5,9 @@ JAVBUS_URL = 'https://www.javbus.com'
 """
 make request
 """
-def make_request(pathname):
+def make_request(path):
     try:
-        res = HTML.ElementFromURL(JAVBUS_URL + pathname)
+        res = HTML.ElementFromURL(JAVBUS_URL + path)
     except:
         return None
     else:
