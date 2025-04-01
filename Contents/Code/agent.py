@@ -122,6 +122,10 @@ class JavAgent(Agent.Movies):
         metadata.directors = [data.director]
         metadata.producers.add(data.label)
         metadata.collections.add(data.series)
-        metadata.posters[data.thumb] = Proxy.Preview(HTTP.Request(data.thumb).content)
+        headers = {
+            'Referer': 'https://www.javbus.com/RBD-690',
+        }
+        metadata.posters[data.thumb] = Proxy.Preview(HTTP.Request(data.thumb, headers=headers).content)
+        metadata.posters[data.cover] = Proxy.Preview(HTTP.Request(data.cover, headers=headers).content)
         # done
         Log.Info("Update is done")

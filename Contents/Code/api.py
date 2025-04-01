@@ -72,9 +72,9 @@ def fetch_info(id):
         data.casts.append(cast)
     # data
     data.title = title
-    data.cover = cover
     data.duration = duration
     data.date = Datetime.ParseDate(date)
+    data.cover = "https://www.javbus.com" + cover
     data.thumb = "https://pics.javbus.com/thumb/" + cover.split('/')[-1].split('_')[0]+".jpg"
     return data
 
